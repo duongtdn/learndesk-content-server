@@ -1,0 +1,25 @@
+{
+  "name": "learndesk-server",
+  "version": "1.0.0",
+  "description": "server provides content for learndesk-web",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duongtdn/learndesk-server.git"
+  },
+  "author": "duongtdn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duongtdn/learndesk-server/issues"
+  },
+  "homepage": "https://github.com/duongtdn/learndesk-server#readme",
+  "dependencies": {
+    "express-api-binder": "^1.0.0",
+    "jsonwebtoken": "^8.2.1",
+    "database-abstractor": "^1.0.0",
+    "enrolldb-dynamodb-driver": "^1.0.0"
+  }
+}
