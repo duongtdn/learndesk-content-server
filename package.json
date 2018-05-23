@@ -4,7 +4,8 @@
   "description": "server provides content for learndesk-web",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "start": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
     "jsonwebtoken": "^8.2.1",
     "database-abstractor": "^1.0.0",
     "enrolldb-dynamodb-driver": "^1.0.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
   }
 }

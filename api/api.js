@@ -1,6 +1,6 @@
 "use strict"
 
-const app = require("express-api-binder")
+const api = require("express-api-binder")
 const DatabaseAbstractor = require("database-abstractor")
 const funcs = require('./get/enroll')
 
@@ -22,8 +22,8 @@ enrollDB.use(require('enrolldb-dynamodb-driver')({
 //   endpoint : `${DB.HOST}:${DB.PORT}`
 // }))
 
-app
+api
   .useDatabase({ enrollDB, contentDB })
-  .createFunction('get', '/study/:courseId', funcs);
+  .createFunction('get', '/content/:courseId', funcs);
 
-module.exports = app
+module.exports = api

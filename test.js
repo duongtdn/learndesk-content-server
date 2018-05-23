@@ -1,5 +1,16 @@
 "use strict"
+const express = require('express')
+const api = require('./api/api.js')
+const cors = require('cors')
 
-const server = require('./api/api.js')
+const app = express();
 
-server.listen(3000)
+app.use(cors());
+
+app.use('/', api);
+
+const PORT = 3301;
+const httpServer = require('http').createServer(app);
+httpServer.listen(PORT)
+
+console.log(`# learndesk-server is running at http://localhost:${PORT}`)
