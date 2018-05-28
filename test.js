@@ -1,4 +1,7 @@
 "use strict"
+
+require('dotenv').config()
+
 const express = require('express')
 const api = require('./api/api.js')
 const cors = require('cors')

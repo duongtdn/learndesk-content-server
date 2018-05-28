@@ -1,5 +1,9 @@
 "use strict"
 
+const { verifyToken } = require('@stormgle/jtoken-util')
+
+const secret = process.env.AUTH_KEY_LEARNDESK
+
 const data = [
   {
     id: '1', 
@@ -45,18 +49,20 @@ const data = [
   }
 ]
 
+function authen() {
+  return verifyToken(secret);
+}
+
 function getEnrollInfo ({ enrollDB }) {
   return function (req, res, next) {
     if (!req.user) {
-      // res.status(401).json({error: 'unauthorized'});
-      // return
-      req.user = { uid: 'tester-uid' };
+      res.status(401).json({error: 'unauthorized'});
+      return
     }
 
     if (req.params && req.params.courseId) {
       const uid = req.user.uid;
       const courseId = req.params.courseId;
-
       enrollDB.getEnroll(
         { uid, courseId },
         (err, data) => {
@@ -88,4 +94,4 @@ function getContentData () {
   }
 }
 
-module.exports = [ getEnrollInfo, getContentData ]
+module.exports = [ authen, getEnrollInfo, getContentData ]
