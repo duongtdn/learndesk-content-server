@@ -2,7 +2,7 @@
 
 const api = require("express-api-binder")
 const DatabaseAbstractor = require("database-abstractor")
-const funcs = require('./get/enroll')
+const funcs = require('./get/content')
 
 const enrollDB = new DatabaseAbstractor();
 const contentDB = new DatabaseAbstractor();
