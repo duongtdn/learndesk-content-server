@@ -18,14 +18,15 @@
   },
   "homepage": "https://github.com/duongtdn/learndesk-server#readme",
   "dependencies": {
-    "database-abstractor": "^1.0.0",
     "dotenv": "^5.0.1",
-    "enrolldb-dynamodb-driver": "^1.0.0",
     "express-api-binder": "^1.0.0",
     "@stormgle/jtoken-util": "^1.0.0"
   },
   "devDependencies": {
+    "database-abstractor": "^1.0.0",
     "cors": "^2.8.4",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "enrolldb-dynamodb-driver": "^1.0.0",
+    "contentdb-dynamodb-driver": "^1.0.0"
   }
 }
