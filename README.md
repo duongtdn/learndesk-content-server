@@ -1,1 +1,1 @@
-# learndesk-server
+# learndesk-content-server
