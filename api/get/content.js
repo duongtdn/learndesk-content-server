@@ -32,7 +32,7 @@ function getEnrollInfo (db) {
               res.status(403).json({error: 'not active'});
             }
           } else {
-            res.status(403).json({error: 'not enroll or service disconnected'});
+            res.status(404).json({error: 'not enroll or service disconnected'});
           }       
         }
       )
