@@ -10,23 +10,26 @@ function authen() {
 
 function getEnrollInfo (db) {
   return function (req, res, next) {
+
     if (!req.user) {
       res.status(401).json({error: 'unauthorized'});
       return
     }
-    if (req.params && req.params.courseId) {
+    if (req.params && req.params.course) {
       const uid = req.user.uid;
-      const courseId = req.params.courseId;
-      db.enrollDB.getEnroll(
+      const courseId = req.params.course;
+
+      db.enroll.getEnroll(
         { uid, courseId },
         (err, data) => {
           if (err) {
             console.log(err)
-            res.status(404).send();
+            res.status(400).send();
             return
           }
           if (data) {
-            if (data.detail && data.detail.status && data.detail.status === 'active') {
+   
+            if (data.status && data.status === 'active') {
               next();
             } else {
               res.status(403).json({error: 'not active'});
@@ -44,9 +47,9 @@ function getEnrollInfo (db) {
 
 function getContentData (db) {
   return function (req, res, next) {
-    const courseId = req.params.courseId;
+    const courseId = req.params.course;
 
-    db.contentDB.getContent(
+    db.content.getContent(
       { courseId },
       (err, data) => {
         if (err) {

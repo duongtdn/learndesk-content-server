@@ -4,8 +4,7 @@
   "description": "server provides content for learndesk-web",
   "main": "index.js",
   "scripts": {
-    "test": "node test",
-    "start": "npm run test"
+    "local": "node example/server.local.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +23,12 @@
   },
   "devDependencies": {
     "database-abstractor": "^1.0.0",
+    "database-test-helper": "^1.0.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "enrolldb-dynamodb-driver": "^1.0.0",
-    "contentdb-dynamodb-driver": "^1.0.0"
+    "contentdb-dynamodb-driver": "^1.0.0",
+    "enrolldb-test-helper": "^1.0.0",
+    "contentdb-test-helper": "^1.0.0"
   }
 }
