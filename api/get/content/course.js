@@ -29,7 +29,7 @@ function getEnrollInfo (db) {
           }
           if (data) {
    
-            if (data.status && data.status === 'active') {
+            if (data.status && (data.status === 'active' || data.status === 'studying') ) {
               next();
             } else {
               res.status(403).json({error: 'not active'});
