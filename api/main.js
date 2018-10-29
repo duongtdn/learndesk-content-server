@@ -3,7 +3,7 @@
 const api = require('express-api-binder')
 
 const funcs = [
-  'get/content/:course',
+  'get/course/:course',
 ]
 
 funcs.forEach(func => {
