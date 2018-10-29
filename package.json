@@ -1,27 +1,27 @@
 {
-  "name": "learndesk-content-server",
+  "name": "@sglearn/learndesk-content-server",
   "version": "1.0.0",
   "description": "server provides content for learndesk-web",
-  "main": "index.js",
+  "main": "api/main.js",
   "scripts": {
     "local": "node example/server.local.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duongtdn/learndesk-server.git"
+    "url": "git+https://github.com/sglearn/learndesk-server.git"
   },
   "author": "duongtdn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/duongtdn/learndesk-server/issues"
+    "url": "https://github.com/sglearn/learndesk-server/issues"
   },
-  "homepage": "https://github.com/duongtdn/learndesk-server#readme",
+  "homepage": "https://github.com/sglearn/learndesk-server#readme",
   "dependencies": {
-    "dotenv": "^5.0.1",
     "express-api-binder": "^1.0.0",
     "@stormgle/jtoken-util": "^1.0.0"
   },
   "devDependencies": {
+    "dotenv": "^5.0.1",
     "database-abstractor": "^1.0.0",
     "database-test-helper": "^1.0.0",
     "cors": "^2.8.4",
