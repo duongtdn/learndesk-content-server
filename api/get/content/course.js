@@ -59,7 +59,7 @@ function getContentData (db) {
         }
         if (data) {
           if (data.detail && data.detail.status && data.detail.status === 'active') {
-            res.status(200).json({ data: data.data });
+            res.status(200).json({ data: data });
           } else {
             res.status(403).json({error: 'not active'});
           }
